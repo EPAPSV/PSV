@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BiblioPólo – Requisição de Livros</title>
+<style>
+  :root { --verde:#2f5d1e; --verde-claro:#e8f2e2; --cinza:#8a8a8a; --borda:#c9d3c4; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#f4f7f2; color:#1c1c1c; }
+  main { max-width:980px; margin:0 auto; padding:24px 16px 48px; }
+  h1 { color:var(--verde); margin:0 0 4px; }
+  p.sub { margin:0 0 16px; color:#444; }
+  .info { margin:0 0 16px; padding:12px 14px; background:#fff; border-left:5px solid var(--verde); border-radius:4px; font-size:14px; line-height:1.5; }
+  .barra { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px; }
+  .barra input, .barra select { padding:10px 12px; font-size:16px; border:2px solid var(--borda); border-radius:8px; font-family:inherit; background:#fff; }
+  .barra input { flex:1; min-width:200px; }
+  .grelha { display:grid; grid-template-columns:repeat(auto-fill, minmax(140px, 1fr)); gap:14px; }
+  .cartao { background:#fff; border:2px solid var(--borda); border-radius:10px; padding:8px; cursor:pointer; text-align:left;
+            font-family:inherit; display:flex; flex-direction:column; gap:6px; }
+  .cartao:hover, .cartao:focus-visible { border-color:var(--verde); outline:none; box-shadow:0 4px 12px rgba(0,0,0,.12); }
+  .cartao .nome { font-size:13px; font-weight:bold; line-height:1.25; }
+  .cartao .aut { font-size:12px; color:#555; }
+  .capa { width:100%; aspect-ratio:2/3; border-radius:6px; background:#e6e6e6; object-fit:cover; display:flex; align-items:center;
+          justify-content:center; text-align:center; padding:10px; font-weight:bold; font-size:14px; line-height:1.2; color:#fff; overflow:hidden; }
+  .indisp { opacity:.55; filter:grayscale(1); }
+  .badge { font-size:11px; color:#9b1c1c; font-style:italic; }
+  .vazio { padding:24px; text-align:center; color:#666; }
+  .fundo { display:none; position:fixed; inset:0; background:rgba(0,0,0,.6); z-index:50; align-items:center; justify-content:center; padding:16px; }
+  .fundo.aberto { display:flex; }
+  .modal { background:#fff; border-radius:12px; max-width:720px; width:100%; max-height:92vh; overflow:auto; padding:20px; position:relative; }
+  .modal .corpo { display:flex; gap:20px; flex-wrap:wrap; }
+  .modal .capa-g { width:240px; max-width:100%; flex:0 0 auto; }
+  .modal .capa-g .capa { font-size:18px; }
+  .modal .txt { flex:1; min-width:240px; }
+  .modal h2 { margin:0 0 4px; color:var(--verde); }
+  .modal .meta { color:#555; font-size:14px; margin-bottom:10px; }
+  .modal .res { line-height:1.5; margin:12px 0; }
+  .modal .est { font-weight:bold; margin:10px 0; }
+  .fechar { position:absolute; top:8px; right:10px; border:0; background:none; font-size:28px; cursor:pointer; color:#444; line-height:1; }
+  button.cta { margin-top:8px; width:100%; padding:14px; font-size:17px; font-weight:bold; color:#fff; background:var(--verde);
+               border:0; border-radius:8px; cursor:pointer; font-family:inherit; }
+  button.cta:disabled { background:#b7c4b1; cursor:not-allowed; }
+  .rodape { margin-top:28px; font-size:12px; color:#666; }
+</style>
+</head>
+<body>
+<main>
+  <h1>BiblioPólo</h1>
+  <p class="sub">Requisição de Livros</p>
+  <div class="info">
+    Escolhe um livro e clica na capa para ver o resumo. Os livros a cinzento já estão requisitados e indicam a data prevista de disponibilidade.
+    No passo seguinte indicas o teu nome, a equipa e o email. O prazo de entrega é de 30 dias após o levantamento,
+    e o levantamento e a entrega são feitos com a equipa HPRO.
+  </div>
+
+  <div class="barra">
+    <input type="search" id="pesq" placeholder="Pesquisar por título ou autor" aria-label="Pesquisar livro">
+    <select id="filtro" aria-label="Filtrar">
+      <option value="todos">Todos os livros</option>
+      <option value="disp">Só disponíveis</option>
+    </select>
+  </div>
+
+  <div id="grelha" class="grelha" aria-live="polite"><div class="vazio">A carregar a lista…</div></div>
+  <div class="rodape" id="atualizado"></div>
+</main>
+
+<div id="fundo" class="fundo" role="dialog" aria-modal="true" aria-labelledby="m-titulo">
+  <div class="modal">
+    <button type="button" class="fechar" id="fechar" aria-label="Fechar">×</button>
+    <div class="corpo">
+      <div class="capa-g" id="m-capa"></div>
+      <div class="txt">
+        <h2 id="m-titulo"></h2>
+        <div class="meta" id="m-meta"></div>
+        <div class="est" id="m-estado"></div>
+        <p class="res" id="m-res"></p>
+        <button type="button" id="continuar" class="cta">Requisitar este livro</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== CONFIGURAÇÃO =====
+const FORMS_URL = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=me3L_ScXJUyilkSt2NH6RxNNbLF3e0NLvmojm1j8U_pUNEhYOUNYTTdYWlBWMlM3TldDQ1NOT1BSNi4u&r35453c1a122c4b6dbb9bcde96710c21b={LIVRO}";
+const DADOS_URL = "livros.json";          // lista de livros (atualizada pelo Excel)
+const DETALHES_URL = "detalhes.json";     // capas e resumos (por ID)
+const CAPA_BASE = "https://books.google.com/books/content?printsec=frontcover&img=1&zoom=";
+// ========================
+
+const grelha = document.getElementById("grelha"), pesq = document.getElementById("pesq"), filtro = document.getElementById("filtro"),
+      fundo = document.getElementById("fundo"), cta = document.getElementById("continuar");
+let livros = [], escolhido = null, ultimoFoco = null;
+
+const pad = n => String(n).padStart(2, "0");
+const fmt = iso => { const d = new Date(iso); return `${pad(d.getUTCDate())}/${pad(d.getUTCMonth()+1)}/${d.getUTCFullYear()}`; };
+const chave = t => t.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+const cor = t => { let h = 0; for (const c of t) h = (h * 31 + c.charCodeAt(0)) % 360; return `hsl(${h},35%,38%)`; };
+
+function capaEl(l, zoom) {
+  if (l.capa) {
+    const img = document.createElement("img");
+    img.className = "capa"; img.alt = "Capa de " + l.titulo; img.loading = "lazy";
+    img.src = CAPA_BASE.replace("printsec", "id=" + encodeURIComponent(l.capa) + "&printsec") + zoom;
+    img.onerror = () => img.replaceWith(placeholder(l));
+    return img;
+  }
+  return placeholder(l);
+}
+function placeholder(l) {
+  const d = document.createElement("div");
+  d.className = "capa"; d.style.background = cor(l.titulo); d.textContent = l.titulo;
+  return d;
+}
+
+function desenhar() {
+  const q = chave(pesq.value.trim()), so = filtro.value === "disp";
+  const vis = livros.filter(l => (!so || l.disponivel) && (!q || chave(l.titulo + " " + (l.autor || "")).includes(q)));
+  grelha.textContent = "";
+  if (!vis.length) { grelha.innerHTML = '<div class="vazio">Nenhum livro encontrado.</div>'; return; }
+  vis.forEach(l => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "cartao" + (l.disponivel ? "" : " indisp");
+    b.appendChild(capaEl(l, 1));
+    const n = document.createElement("span"); n.className = "nome"; n.textContent = l.titulo; b.appendChild(n);
+    if (l.autor) { const a = document.createElement("span"); a.className = "aut"; a.textContent = l.autor; b.appendChild(a); }
+    if (!l.disponivel) {
+      const s = document.createElement("span"); s.className = "badge";
+      s.textContent = l.disponivelAPartir ? "Disponível a partir de " + fmt(l.disponivelAPartir) : "Indisponível";
+      b.appendChild(s);
+    }
+    b.addEventListener("click", () => abrir(l, b));
+    grelha.appendChild(b);
+  });
+}
+
+function abrir(l, origem) {
+  escolhido = l; ultimoFoco = origem;
+  const mc = document.getElementById("m-capa"); mc.textContent = ""; mc.appendChild(capaEl(l, 2));
+  document.getElementById("m-titulo").textContent = l.titulo;
+  document.getElementById("m-meta").textContent = [l.autor, l.origem].filter(Boolean).join(" · ");
+  const est = document.getElementById("m-estado");
+  est.textContent = l.disponivel ? "Disponível" : (l.disponivelAPartir ? "Indisponível – disponível a partir de " + fmt(l.disponivelAPartir) : "Indisponível");
+  est.style.color = l.disponivel ? "#2f5d1e" : "#9b1c1c";
+  document.getElementById("m-res").textContent = l.resumo || "Resumo em breve.";
+  cta.disabled = !l.disponivel;
+  fundo.classList.add("aberto"); document.getElementById("fechar").focus();
+}
+function fechar() { fundo.classList.remove("aberto"); if (ultimoFoco) ultimoFoco.focus(); }
+document.getElementById("fechar").addEventListener("click", fechar);
+fundo.addEventListener("click", e => { if (e.target === fundo) fechar(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && fundo.classList.contains("aberto")) fechar(); });
+cta.addEventListener("click", () => {
+  if (!escolhido || !escolhido.disponivel) return;
+  window.location.href = FORMS_URL.replace("{LIVRO}", encodeURIComponent(escolhido.titulo));
+});
+pesq.addEventListener("input", desenhar); filtro.addEventListener("change", desenhar);
+
+const get = u => fetch(u, { cache: "no-store" }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); });
+Promise.all([get(DADOS_URL), get(DETALHES_URL).catch(() => ({ detalhes: {} }))]).then(([d, x]) => {
+  const det = x.detalhes || {};
+  livros = d.livros.map(l => ({ ...l, ...(det[l.id] || {}), disponivel: l.estado === "Disponível" }))
+                   .sort((a, b) => chave(a.titulo).localeCompare(chave(b.titulo), "pt"));
+  desenhar();
+  if (d.atualizado) document.getElementById("atualizado").textContent = "Lista atualizada em " + fmt(d.atualizado) + ".";
+}).catch(() => { grelha.innerHTML = '<div class="vazio">Não foi possível carregar a lista. Tenta novamente mais tarde.</div>'; });
+</script>
+</body>
+</html>
