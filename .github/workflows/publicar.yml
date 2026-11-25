@@ -34,7 +34,7 @@ jobs:
         if: github.event_name == 'repository_dispatch'
         run: |
           set -e
-          jq '[.client_payload.dados.livros[] | {id: (.id|tostring), titulo: (.titulo|tostring), autor: ((.autor // "")|tostring), origem: ((.origem // "")|tostring), estado: (if ((.estado // "")|tostring) == "" then "Disponível" else (.estado|tostring) end), disponivelAPartir: (if ((.disponivelAPartir // "")|tostring) == "" then null else ((.disponivelAPartir|tostring)[0:10]) end)}] | sort_by(.titulo | ascii_downcase)' "$GITHUB_EVENT_PATH" > novos.json
+          jq '[.client_payload.dados.livros[] | select((.ID // "") != "") | {id: (.ID|tostring), titulo: (.Livro|tostring), autor: ((.Autor // "")|tostring), origem: ((.Origem // "")|tostring), estado: (if ((.Estado // "")|tostring) == "" then "Disponível" else (.Estado|tostring) end), disponivelAPartir: (if ((."Data prevista de devolução" // "")|tostring) == "" then null else ((."Data prevista de devolução"|tostring)[0:10]) end)}] | sort_by(.titulo | ascii_downcase)' "$GITHUB_EVENT_PATH" > novos.json
           # Segurança: só aceita se tiver uma lista com tamanho razoável
           jq -e 'length > 50' novos.json > /dev/null
           if [ "$(jq -c '.livros' Biblioteca/livros.json)" != "$(jq -c '.' novos.json)" ]; then
