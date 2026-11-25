@@ -1,0 +1,701 @@
+{
+ "atualizado": "2026-11-24T16:30:00Z",
+ "livros": [
+  {
+   "id": "L001",
+   "titulo": "A estranha ordem das coisas",
+   "autor": "António Damásio",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I052",
+   "titulo": "A Filha da Fortuna",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L002",
+   "titulo": "A Força das palavras",
+   "autor": "Gustavo Santos",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L003",
+   "titulo": "A Força do otimismo",
+   "autor": "Luís Rojas Marcos",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I036",
+   "titulo": "A longa estrada para casa",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I016",
+   "titulo": "A maldição",
+   "autor": "John Grisham",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L004",
+   "titulo": "A maldição",
+   "autor": "John Grisham",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L005",
+   "titulo": "A Melodia do Adeus",
+   "autor": "Nicholas Sparks",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I040",
+   "titulo": "A órfã perdida",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I008",
+   "titulo": "A rainha Ginga",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I029",
+   "titulo": "A rapariga no gelo",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I039",
+   "titulo": "A rapariga que mataste",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L006",
+   "titulo": "A saúde pelos citrinos",
+   "autor": "Sylvie Haineault",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I020",
+   "titulo": "A sombra da noite",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L007",
+   "titulo": "A vegetariana",
+   "autor": "Hang Kang",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L008",
+   "titulo": "A Vida é uma anedota",
+   "autor": "Pedro Ribeiro",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L009",
+   "titulo": "A vida feliz",
+   "autor": "Elena Varvello",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L010",
+   "titulo": "A vida mentirosa dos adultos",
+   "autor": "Elena Ferrante",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I022",
+   "titulo": "A volta ao medo em 80 dias",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L011",
+   "titulo": "Agarra o agora",
+   "autor": "Gustavo Santos",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I023",
+   "titulo": "Amigas para sempre",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I047",
+   "titulo": "Anjos e Demónios",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I031",
+   "titulo": "Ansiedade como enfrentar o mal do século",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I041",
+   "titulo": "As amantes",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L012",
+   "titulo": "As asas do perdão",
+   "autor": "Kyle Gray",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I048",
+   "titulo": "As cinquenta sombras de Grey",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I033",
+   "titulo": "As emoções simplesmente",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I009",
+   "titulo": "Até que consigas voar",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I030",
+   "titulo": "Boca do inferno",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I026",
+   "titulo": "Caça ao homem",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I050",
+   "titulo": "Código Da Vinci",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I051",
+   "titulo": "Cold Mountain",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I042",
+   "titulo": "Com a cabeça nas nuvens",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L013",
+   "titulo": "Como fazer os outros gostar de si",
+   "autor": "Nicholas Boothman",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I027",
+   "titulo": "Como ser feliz até aos 100",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I038",
+   "titulo": "Como viver com a autoestima",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L014",
+   "titulo": "Dar ao pedal",
+   "autor": "Jorge Serqueira",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L015",
+   "titulo": "Em nome do pai",
+   "autor": "Nuno Lobo Antunes",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L016",
+   "titulo": "Faz um restart à tua vida",
+   "autor": "Jorge Coutinho",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L017",
+   "titulo": "Felizes para sempre",
+   "autor": "Nora Roberts",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L018",
+   "titulo": "Festa de família",
+   "autor": "Sveva Casati Modignani",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I010",
+   "titulo": "Haatchi e little B",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I032",
+   "titulo": "Índice médio de felicidade",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L019",
+   "titulo": "Inferno no Vaticano",
+   "autor": "Flávio Capuleto",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L020",
+   "titulo": "Intoxicação Digital",
+   "autor": "Augusto Cury",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I037",
+   "titulo": "Mademoiselle Chanel e o perfume do amor",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I014",
+   "titulo": "Mindset a atitude mental para o sucesso",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I018",
+   "titulo": "Mixórdia de temáticas",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I005",
+   "titulo": "Não forces a vida, flui",
+   "autor": "Manuel Clemente",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L021",
+   "titulo": "Não forces a vida, flui",
+   "autor": "Manuel Clemente",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L022",
+   "titulo": "No céu tudo é perfeito",
+   "autor": "Annie Kagan",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I035",
+   "titulo": "O agente secreto Dr No",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I049",
+   "titulo": "O Capitão Alatriste",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I021",
+   "titulo": "O demónio e a senhorita Prym",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I013",
+   "titulo": "O homem em busca de um sentido",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I025",
+   "titulo": "O livro da esperança",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I007",
+   "titulo": "O perfume",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L023",
+   "titulo": "O sentido da vida",
+   "autor": "Alberto Lopes",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L024",
+   "titulo": "O último Papa",
+   "autor": "Luís Miguel Rocha",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L025",
+   "titulo": "O verdadeiro regime anti-cancro",
+   "autor": "David Kharyat",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L026",
+   "titulo": "Os cães de Salazar",
+   "autor": "Francisco Moita Flores",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I012",
+   "titulo": "Os filhos da droga",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I011",
+   "titulo": "Os filhos de Anansi",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I001",
+   "titulo": "Os homens são de Marte as mulheres são de Vénus",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L027",
+   "titulo": "Pedra Pagã",
+   "autor": "Nora Roberts",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I019",
+   "titulo": "Quem mexeu no meu queijo",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I046",
+   "titulo": "Refugiado",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L028",
+   "titulo": "Resgate",
+   "autor": "Danielle Steel",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I002",
+   "titulo": "Saber lidar com as pessoas",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L029",
+   "titulo": "Salva por um escocês",
+   "autor": "Sarah Macleam",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I003",
+   "titulo": "Sangue quente",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I024",
+   "titulo": "Silêncio Mortal",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L030",
+   "titulo": "Só o amor importa",
+   "autor": "Karen M. Wyatt",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I017",
+   "titulo": "Solidão",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I006",
+   "titulo": "Tu podes realizar o teu sonho",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I045",
+   "titulo": "Um estranho no coração",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I028",
+   "titulo": "Um homem com sorte",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L031",
+   "titulo": "Um refúgio para a vida",
+   "autor": "Nicholas Sparks",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I004",
+   "titulo": "Uma caixa de primeiros socorros das emoções",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L032",
+   "titulo": "Uma Família Verde",
+   "autor": "Maria Dordio",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L033",
+   "titulo": "Viagem ao Além",
+   "autor": "Jeffrey A. Marks",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I015",
+   "titulo": "Vida Lixo Zero",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I044",
+   "titulo": "Vida organizada",
+   "autor": "Thais Godinho",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L034",
+   "titulo": "Vida organizada",
+   "autor": "Thais Godinho",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I034",
+   "titulo": "Vive a tua vida",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "L035",
+   "titulo": "Viver em tempos de mudança",
+   "autor": "Maria do Carmo Oliveira",
+   "origem": "Biblioteca Municipal",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  },
+  {
+   "id": "I043",
+   "titulo": "Zorro o começo da lenda",
+   "autor": "",
+   "origem": "Biblioteca da escola",
+   "estado": "Disponível",
+   "disponivelAPartir": null
+  }
+ ]
+}
