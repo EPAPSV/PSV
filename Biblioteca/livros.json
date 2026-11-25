@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-25T14:53:37Z",
+  "atualizado": "2026-11-25T15:48:35Z",
   "livros": [
     {
       "id": "L001",
@@ -302,7 +302,7 @@
       "titulo": "Em nome do pai",
       "autor": "Nuno Lobo Antunes",
       "origem": "Biblioteca Municipal",
-      "estado": "Disponível",
+      "estado": "Pedido pendente",
       "disponivelAPartir": null
     },
     {
