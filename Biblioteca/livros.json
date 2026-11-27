@@ -1,13 +1,13 @@
 {
-  "atualizado": "2026-11-27T16:16:56Z",
+  "atualizado": "2026-11-27T16:21:57Z",
   "livros": [
     {
       "id": "L001",
       "titulo": "A estranha ordem das coisas",
       "autor": "António Damásio",
       "origem": "Biblioteca Municipal",
-      "estado": "Pedido pendente",
-      "disponivelAPartir": "2026-12-18"
+      "estado": "Disponível",
+      "disponivelAPartir": null
     },
     {
       "id": "I052",
@@ -302,7 +302,7 @@
       "titulo": "Em nome do pai",
       "autor": "Nuno Lobo Antunes",
       "origem": "Biblioteca Municipal",
-      "estado": "Pedido pendente",
+      "estado": "Disponível",
       "disponivelAPartir": null
     },
     {
