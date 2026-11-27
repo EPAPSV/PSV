@@ -1,13 +1,13 @@
 {
-  "atualizado": "2026-11-27T15:36:57Z",
+  "atualizado": "2026-11-27T15:41:53Z",
   "livros": [
     {
       "id": "L001",
       "titulo": "A estranha ordem das coisas",
       "autor": "António Damásio",
       "origem": "Biblioteca Municipal",
-      "estado": "Pedido pendente",
-      "disponivelAPartir": "2026-12-27"
+      "estado": "Disponível",
+      "disponivelAPartir": null
     },
     {
       "id": "I052",
